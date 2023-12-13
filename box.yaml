@@ -1,0 +1,376 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: box
+  title: Box
+  tags:
+    - apis
+    - documents
+    - content
+  links:
+    - url: 'https://raw.githubusercontent.com/apis-json/artisanal/main/apis/box.json'
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - box-api
+  hasPart:
+    - box-blog
+    - box-newsletter
+    - box-change-log
+    - box-samples
+    - box-forum
+    - box-status
+    - box-feedback
+    - box-login
+    - box-pricing
+    - box-node-sdk
+    - box-java-sdk
+    - box-python-sdk
+    - box-net-sdk
+    - box-ios-content-sdk
+    - box-cli
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: box-api
+  title: Box API
+  description: >-
+    Development with Box Platform is easy with SDKs, Box CLI, Postman
+    collection, front-end UI elements, and much more.
+  tags:
+    - documents
+    - content
+  links:
+    - url: 'https://developer.box.com/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: box
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-documentation
+  title: Box Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.box.com/reference/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-openapi
+  title: Box OpenAPI
+  description: Needs a description.
+  links:
+    - url: 'https://raw.githubusercontent.com/box/box-openapi/main/openapi.json'
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-blog
+  title: Box Blog
+  description: Needs a description.
+  links:
+    - url: 'https://medium.com/box-developer-blog'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-newsletter
+  title: Box Newsletter
+  description: Needs a description.
+  links:
+    - url: 'https://developer.box.com/newsletter/'
+      title: Newsletter
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-change-log
+  title: Box Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://developer.box.com/changelog/'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-samples
+  title: Box Samples
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/samples'
+      title: Samples
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-forum
+  title: Box Forum
+  description: Needs a description.
+  links:
+    - url: >-
+        https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+      title: Forum
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-status
+  title: Box Status
+  description: Needs a description.
+  links:
+    - url: 'https://status.box.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-feedback
+  title: Box Feedback
+  description: Needs a description.
+  links:
+    - url: 'https://pulse.box.com/forums/909778-product-feedback?category_id=330838'
+      title: Feedback
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-login
+  title: Box Login
+  description: Needs a description.
+  links:
+    - url: 'https://account.box.com/login'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-pricing
+  title: Box Pricing
+  description: Needs a description.
+  links:
+    - url: 'https://www.box.com/pricing'
+      title: Pricing
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-node-sdk
+  title: Box Node SDK
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/box-node-sdk'
+      title: Node SDK
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-java-sdk
+  title: Box Java SDK
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/box-java-sdk'
+      title: Java SDK
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-python-sdk
+  title: Box Python SDK
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/box-python-sdk'
+      title: Python SDK
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-net-sdk
+  title: Box .NET SDK
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/box-windows-sdk-v2'
+      title: .NET SDK
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-ios-content-sdk
+  title: Box iOS Content SDK
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/box-ios-sdk'
+      title: iOS Content SDK
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: box-cli
+  title: Box CLI
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/box/boxcli'
+      title: CLI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - box

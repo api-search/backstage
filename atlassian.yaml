@@ -1,0 +1,505 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: atlassian
+  title: Atlassian
+  tags:
+    - apis
+    - software
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/atlassian.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - jira-api
+    - confluence-api
+    - bitbucket-api
+  hasPart:
+    - atlassian-status
+    - atlassian-blog
+    - atlassian-road-map
+    - atlassian-marketplace
+    - atlassian-support
+    - atlassian-login
+    - atlassian-signup
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: jira-api
+  title: Jira API
+  description: >-
+    The Jira REST API enables you to interact with Jira programmatically. Use
+    this API to build apps, script interactions with Jira, or develop any other
+    type of integration. This page documents the REST resources available in
+    Jira Cloud, including the HTTP response codes and example requests and
+    responses.
+  tags:
+    - software
+    - projects
+  links:
+    - url: 'https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: atlassian
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-documentation
+  title: Atlassian Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-openapi
+  title: Atlassian OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://dac-static.atlassian.com/cloud/jira/platform/swagger-v3.v3.json?_v=1.6660.0-0.1294.0
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-postman-collection
+  title: Atlassian Postman Collection
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/jira/platform/jiracloud.3.postman.json
+      title: Postman Collection
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: confluence-api
+  title: Confluence API
+  description: >-
+    This is the reference for the Confluence Cloud REST API. This API is the
+    primary way to get and modify data in Confluence Cloud, whether you are
+    developing an app or any other integration. Use it to interact with
+    Confluence entities, like pages and blog posts, spaces, users, groups, and
+    more.
+  tags:
+    - content
+    - pages
+    - posts
+  links:
+    - url: 'https://developer.atlassian.com/cloud/confluence/rest/v1/intro/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: atlassian
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-documentation
+  title: Atlassian Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.atlassian.com/cloud/confluence/rest/v1/intro/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-openapi
+  title: Atlassian OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://dac-static.atlassian.com/cloud/confluence/swagger.v3.json?_v=1.6660.0-0.1294.0
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-postman-collection
+  title: Atlassian Postman Collection
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/confluence/confcloud.1.postman.json
+      title: Postman Collection
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-authenticaiton
+  title: Atlassian Authenticaiton
+  description: Needs a description.
+  links:
+    - url: 'https://developer.atlassian.com/cloud/confluence/rest/v1/intro/#auth'
+      title: Authenticaiton
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-status-codes
+  title: Atlassian Status Codes
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/confluence/rest/v1/intro/#status-code
+      title: Status Codes
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-capabilities
+  title: Atlassian Capabilities
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/confluence/rest/v1/intro/#capabilities
+      title: Capabilities
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bitbucket-api
+  title: BitBucket API
+  description: >-
+    The purpose of this section is to describe how to authenticate when making
+    API calls using the Bitbucket REST API.
+  tags:
+    - code
+    - source-control
+  links:
+    - url: 'https://developer.atlassian.com/cloud/bitbucket/rest/intro/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: atlassian
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-documentation
+  title: Atlassian Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.atlassian.com/cloud/bitbucket/rest/intro/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-openapi
+  title: Atlassian OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://dac-static.atlassian.com/cloud/bitbucket/swagger.v3.json?_v=2.300.9-0.1294.0
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-postman-collection
+  title: Atlassian Postman Collection
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/bitbucket/bitbucketcloud.postman.json
+      title: Postman Collection
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-authentication
+  title: Atlassian Authentication
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication
+      title: Authentication
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-status
+  title: Atlassian Status
+  description: Needs a description.
+  links:
+    - url: 'https://status.developer.atlassian.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-blog
+  title: Atlassian Blog
+  description: Needs a description.
+  links:
+    - url: 'https://blog.developer.atlassian.com/'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-road-map
+  title: Atlassian Road Map
+  description: Needs a description.
+  links:
+    - url: 'https://trello.com/b/z2GIJ3xD/forge-roadmap-for-developers'
+      title: Road Map
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-marketplace
+  title: Atlassian Marketplace
+  description: Needs a description.
+  links:
+    - url: 'https://marketplace.atlassian.com/'
+      title: Marketplace
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-support
+  title: Atlassian Support
+  description: Needs a description.
+  links:
+    - url: 'https://developer.atlassian.com/support'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-login
+  title: Atlassian Login
+  description: Needs a description.
+  links:
+    - url: 'https://id.atlassian.com/login'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: atlassian-signup
+  title: Atlassian Signup
+  description: Needs a description.
+  links:
+    - url: 'https://id.atlassian.com/signup'
+      title: Signup
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - atlassian

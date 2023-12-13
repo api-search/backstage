@@ -1,0 +1,75 @@
+# Systems
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: platform
+  title: APIs.io Platform
+  description: This is what APIs.io is built on.
+  tags:
+    - infrastructure
+spec:
+  owner: apis-io  
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: operations
+  title: APIs.io Operations
+  description: These are the things used to operate.
+  tags:
+    - business
+    - automoation
+spec:
+  owner: apis-io    
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: user-interfaces
+  title: APIs.io User Interfaces
+  description: The interfaces for APIs.io users.
+  tags:
+    - websites
+    - applications
+    - widgets  
+spec:
+  owner: apis-io  
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: community
+  title: APIs.io Community
+  description: The APIs.io community destinations.
+  tags:
+    - forums
+    - social
+    - questions
+    - answers  
+spec:
+  owner: apis-io
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: specifications
+  title: APIs.io Specifications
+  description: The API specifications we depend on.
+  tags:
+    - standards  
+spec:
+  owner: apis-io         
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: tools
+  title: APIs.io Tools
+  description: The tooling used as part of APIs.io.
+  tags:
+    - open-source
+    - commercial
+    - custom  
+spec:
+  owner: apis-io 

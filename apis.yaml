@@ -1,0 +1,175 @@
+# APIs
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: auth-api
+  title: APIs.io Authentication API
+  description: The authentication API for APIs.io.
+  tags:
+    - authentication
+spec:
+  type: auth
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: engine-api
+  title: APIs.io Engine API
+  description: The engine behind APIs.io search.
+  tags:
+    - engine
+    - crawler
+    - overlay
+spec:
+  type: engine
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!    
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: linter-api
+  title: APIs.io Linter API
+  description: The linting used by the APIs.io rating system.
+  tags:
+    - linting
+    - rules
+    - rating
+spec:
+  type: ratings
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!    
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: maintainers-api
+  title: APIs.io Maintainers API
+  description: The API for managing APIs.json maintainers.
+  tags:
+    - maintainers  
+    - metadata
+spec:
+  type: metadata
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!   
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: properties-api
+  title: APIs.io Properties API
+  description: The API for managing APIs.json properties.
+  tags:
+    - properties
+    - metadata
+spec:
+  type: metadata
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!              
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: publishing-api
+  title: APIs.io Publishing API
+  description: The API for publish APIs to websites.
+  tags:
+    - publishing
+    - websites
+    - browsing
+    - static
+spec:
+  type: publishing
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!       
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ratings-api
+  title: APIs.io Ratings API
+  description: The API for rating APIs in APIs.io.
+  tags:
+    - ratings
+    - rules
+    - scores
+spec:
+  type: ratings
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!       
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: rules-api
+  title: APIs.io Rules API
+  description: The API for managing rules in the APIs.io rating system.
+  tags:
+    - ratings
+    - rules
+    - scores  
+spec:
+  type: ratings
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!       
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: search-api
+  title: APIs.io Search API
+  description: The API for searching APIs in APIs.io.
+  tags:
+    - search
+spec:
+  type: search
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!       
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: tags-api
+  title: APIs.io Tags API
+  description: The API for managing tags applied to APIs.io APIs.
+  tags:
+    - tags
+    - taxonomy
+spec:
+  type: metadata
+  lifecycle: alpha
+  owner: apis-io
+  system: platform
+  definition: |
+    Hello World!!           

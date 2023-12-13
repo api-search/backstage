@@ -1,0 +1,530 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bigcommerce
+  title: BigCommerce
+  tags:
+    - commerce
+    - products
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/bigcommerce.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - bigcommerce-storefront-carts-api
+    - bigcommerce-storefront-checkouts-api
+    - bigcommerce-storefront-cookie-consent-api
+    - bigcommerce-storefront-customers-api
+  hasPart:
+    - bigcommerce-api-specs
+    - bigcommerce-portal
+    - bigcommerce-getting-started
+    - bigcommerce-change-log
+    - bigcommerce-sdks
+    - bigcommerce-slack
+    - bigcommerce-discord
+    - bigcommerce-github-organization
+    - bigcommerce-youtube
+    - bigcommerce-status
+    - bigcommerce-support
+    - bigcommerce-terms-of-service
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bigcommerce-storefront-carts-api
+  title: BigCommerce Storefront Carts API
+  description: >-
+    Manage cart operations and data using frontend JavaScript on BigCommerce
+    Stencil-powered storefronts.
+  tags:
+    - commerce
+    - carts
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/carts'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: bigcommerce
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-documentation
+  title: BigCommerce Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/carts'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-openapi
+  title: BigCommerce OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/bigcommerce/api-specs/main/reference/carts.sf.yml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bigcommerce-storefront-checkouts-api
+  title: BigCommerce Storefront Checkouts API
+  description: >-
+    Manage checkout operations and data using front-end JavaScript on
+    BigCommerce Stencil-powered storefronts.
+  tags:
+    - commerce
+    - checkouts
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/checkouts'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: bigcommerce
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-documentation
+  title: BigCommerce Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/checkouts'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-openapi
+  title: BigCommerce OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/bigcommerce/api-specs/main/reference/checkouts.sf.yml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bigcommerce-storefront-cookie-consent-api
+  title: BigCommerce Storefront Cookie Consent API
+  description: Specify shopper cookie consent preferences.
+  tags:
+    - commerce
+    - cookies
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/consent'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: bigcommerce
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-documentation
+  title: BigCommerce Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/consent'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-openapi
+  title: BigCommerce OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/bigcommerce/api-specs/main/reference/consent.sf.yml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bigcommerce-storefront-customers-api
+  title: BigCommerce Storefront Customers API
+  description: >-
+    Manage customers and data via front-end JavaScript on BigCommerce
+    Stencil-powered storefronts.
+  tags:
+    - commerce
+    - customers
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/customers'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: bigcommerce
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-documentation
+  title: BigCommerce Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/rest-storefront/customers'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-openapi
+  title: BigCommerce OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/bigcommerce/api-specs/main/reference/customers.sf.yml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-api-specs
+  title: BigCommerce API Specs
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/bigcommerce/api-specs/tree/main'
+      title: API Specs
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-portal
+  title: BigCommerce Portal
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/'
+      title: Portal
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-getting-started
+  title: BigCommerce Getting Started
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/docs/start'
+      title: Getting Started
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-change-log
+  title: BigCommerce Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/release-notes'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-sdks
+  title: BigCommerce SDKs
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bigcommerce.com/tools-resources'
+      title: SDKs
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-slack
+  title: BigCommerce Slack
+  description: Needs a description.
+  links:
+    - url: 'https://forms.gle/Q8cuoM7WfU3QE8a7A'
+      title: Slack
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-discord
+  title: BigCommerce Discord
+  description: Needs a description.
+  links:
+    - url: 'https://discord.gg/qzGDFDXc4w'
+      title: Discord
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-github-organization
+  title: BigCommerce GitHub Organization
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/bigcommerce'
+      title: GitHub Organization
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-youtube
+  title: BigCommerce YouTube
+  description: Needs a description.
+  links:
+    - url: 'https://www.youtube.com/c/bigcommerce'
+      title: YouTube
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-status
+  title: BigCommerce Status
+  description: Needs a description.
+  links:
+    - url: 'https://status.bigcommerce.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-support
+  title: BigCommerce Support
+  description: Needs a description.
+  links:
+    - url: 'https://support.bigcommerce.com/'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigcommerce-terms-of-service
+  title: BigCommerce Terms of Service
+  description: Needs a description.
+  links:
+    - url: 'https://www.bigcommerce.com/terms/api-terms/'
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bigcommerce

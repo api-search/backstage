@@ -1,0 +1,319 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: auth0
+  title: Auth0
+  tags:
+    - authentication
+    - authorization
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/auth0.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - auth0-api
+  hasPart:
+    - auth0-articles
+    - auth0-quickstarts
+    - auth0-sdks
+    - auth0-login
+    - auth0-sign-up
+    - auth0-blog
+    - auth0-webinars
+    - auth0-support
+    - auth0-type
+    - auth0-faq
+    - auth0-status
+    - auth0-privacy
+    - auth0-terms-of-service
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: auth0-api
+  title: Auth0 API
+  description: >-
+    Auth0 exposes the following APIs for developers to consume in their
+    applications.
+  tags:
+    - authentication
+    - authorization
+  links:
+    - url: 'https://auth0.com/docs/api'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: auth0
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-documentation
+  title: Auth0 Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/docs/api'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-articles
+  title: Auth0 Articles
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/docs/articles'
+      title: Articles
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-quickstarts
+  title: Auth0 Quickstarts
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/docs/quickstarts'
+      title: Quickstarts
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-sdks
+  title: Auth0 SDKs
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/docs/libraries'
+      title: SDKs
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-login
+  title: Auth0 Login
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.auth0.com/u/login/identifie'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-sign-up
+  title: Auth0 Sign UP
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/signup'
+      title: Sign UP
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-blog
+  title: Auth0 Blog
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/blog/'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-webinars
+  title: Auth0 Webinars
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/resources/webinars'
+      title: Webinars
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-support
+  title: Auth0 Support
+  description: Needs a description.
+  links:
+    - url: 'https://support.auth0.com/'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-type
+  title: Auth0 Type
+  description: Needs a description.
+  links:
+    - url: 'https://example.com'
+      title: Type
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-faq
+  title: Auth0 FAQ
+  description: Needs a description.
+  links:
+    - url: 'https://community.auth0.com/c/faq/42'
+      title: FAQ
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-status
+  title: Auth0 Status
+  description: Needs a description.
+  links:
+    - url: 'https://status.auth0.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-privacy
+  title: Auth0 Privacy
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/privacy'
+      title: Privacy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth0-terms-of-service
+  title: Auth0 Terms of Service
+  description: Needs a description.
+  links:
+    - url: 'https://auth0.com/web-terms'
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - auth0

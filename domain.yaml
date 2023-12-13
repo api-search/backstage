@@ -1,0 +1,35 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-domain
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: apis-io-domain
+  title: APIs.io Domain
+  description: This is the domain for the APIs.io search engine.
+  tags:
+    - search
+spec:
+  owner: apis-io
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: apis-json-domain
+  title: APIs.json Domain
+  description: This is the domain for the APIs.json standard.
+  tags:
+    - specification
+    - discovery
+spec:
+  owner: apis-io
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: apievangelist-domain
+  title: API Evangelist Domain
+  description: This is the domain for the API Evangelist website.
+  tags:
+    - blog
+spec:
+  owner: apis-io  

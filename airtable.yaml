@@ -1,0 +1,246 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: airtable
+  title: Airtable
+  tags:
+    - forms
+    - spreadsheets
+    - applications
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/airtable.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - airtable-api
+  hasPart:
+    - airtable-authentication
+    - airtable-oauth-scopes
+    - airtable-authentication
+    - airtable-errors
+    - airtable-rate-limits
+    - airtable-change-log
+    - airtable-newsletter
+    - airtable-extensions
+    - airtable-forum
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: airtable-api
+  title: Airtable API
+  description: >-
+    he Airtable API can be used to integrate your data in Airtable with any
+    external system. The API closely follows REST semantics, uses JSON to encode
+    objects, and relies on standard HTTP codes to signal operation outcomes.
+  tags:
+    - forms
+    - spreadsheets
+    - applications
+  links:
+    - url: 'https://airtable.com/developers/web/api/introduction'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: airtable
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-documentation
+  title: Airtable Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/introduction'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-authentication
+  title: Airtable Authentication
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/authentication'
+      title: Authentication
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-oauth-scopes
+  title: Airtable OAuth Scopes
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/scopes'
+      title: OAuth Scopes
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-authentication
+  title: Airtable Authentication
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/oauth-reference'
+      title: Authentication
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-errors
+  title: Airtable Errors
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/errors'
+      title: Errors
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-rate-limits
+  title: Airtable Rate Limits
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/rate-limits'
+      title: Rate Limits
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-change-log
+  title: Airtable Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/web/api/changelog'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-newsletter
+  title: Airtable Newsletter
+  description: Needs a description.
+  links:
+    - url: 'http://eepurl.com/gVD-df'
+      title: Newsletter
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-extensions
+  title: Airtable Extensions
+  description: Needs a description.
+  links:
+    - url: 'https://airtable.com/developers/extensions'
+      title: Extensions
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: airtable-forum
+  title: Airtable Forum
+  description: Needs a description.
+  links:
+    - url: 'https://community.airtable.com/c/developers/55'
+      title: Forum
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - airtable

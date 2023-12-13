@@ -1,0 +1,359 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: cloudflare
+  title: Cloudflare
+  tags:
+    - dns
+    - networks
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/cloudflare.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - cloudflare-api
+  hasPart:
+    - cloudflare-learning-paths
+    - cloudflare-tutorials
+    - cloudflare-status
+    - cloudflare-login
+    - cloudflare-sign-up
+    - cloudflare-plans
+    - cloudflare-features
+    - cloudflare-blog
+    - cloudflare-partners
+    - cloudflare-case-studies
+    - cloudflare-knowledge
+    - cloudflare-forums
+    - cloudflare-terms-of-service
+    - cloudflare-privacy-policy
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: cloudflare-api
+  title: Cloudflare API
+  description: >-
+    Interact with Cloudflare's products and services via the Cloudflare API.
+    Using the Cloudflare API requires authentication so that Cloudflare knows
+    who is making requests and what permissions you have. Create an API token to
+    grant access to the API to perform actions.
+  tags:
+    - dns
+    - networks
+  links:
+    - url: 'https://developers.cloudflare.com/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: cloudflare
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-documentation
+  title: Cloudflare Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://developers.cloudflare.com/api/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-openapi
+  title: Cloudflare OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-learning-paths
+  title: Cloudflare Learning Paths
+  description: Needs a description.
+  links:
+    - url: 'https://developers.cloudflare.com/learning-paths/'
+      title: Learning Paths
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-tutorials
+  title: Cloudflare Tutorials
+  description: Needs a description.
+  links:
+    - url: 'https://developers.cloudflare.com/tutorials/'
+      title: Tutorials
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-status
+  title: Cloudflare Status
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflarestatus.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-login
+  title: Cloudflare Login
+  description: Needs a description.
+  links:
+    - url: 'https://dash.cloudflare.com/login'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-sign-up
+  title: Cloudflare Sign Up
+  description: Needs a description.
+  links:
+    - url: 'https://dash.cloudflare.com/sign-up'
+      title: Sign Up
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-plans
+  title: Cloudflare Plans
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflare.com/plans'
+      title: Plans
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-features
+  title: Cloudflare Features
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflare.com/features-cdn'
+      title: Features
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-blog
+  title: Cloudflare Blog
+  description: Needs a description.
+  links:
+    - url: 'https://blog.cloudflare.com/'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-partners
+  title: Cloudflare Partners
+  description: Needs a description.
+  links:
+    - url: 'https://partners.cloudflare.com/'
+      title: Partners
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-case-studies
+  title: Cloudflare Case Studies
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflare.com/case-studies'
+      title: Case Studies
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-knowledge
+  title: Cloudflare Knowledge
+  description: Needs a description.
+  links:
+    - url: 'https://support.cloudflare.com/'
+      title: Knowledge
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-forums
+  title: Cloudflare Forums
+  description: Needs a description.
+  links:
+    - url: 'https://community.cloudflare.com/'
+      title: Forums
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-terms-of-service
+  title: Cloudflare Terms of Service
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflare.com/terms'
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cloudflare-privacy-policy
+  title: Cloudflare Privacy Policy
+  description: Needs a description.
+  links:
+    - url: 'https://www.cloudflare.com/privacypolicy/'
+      title: Privacy Policy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - cloudflare

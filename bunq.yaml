@@ -1,0 +1,381 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bunq
+  title: Bunq
+  tags:
+    - apis
+    - banks
+    - banking
+    - psd2
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/bunq.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - bunq-api
+  hasPart:
+    - bunq-portal
+    - bunq-authentication
+    - bunq-errors
+    - bunq-headers
+    - bunq-type
+    - bunq-callbacks
+    - bunq-pagination
+    - bunq-change-log
+    - bunq-status
+    - bunq-github-organization
+    - bunq-postman-collections
+    - bunq-sandbox
+    - bunq-blog
+    - bunq-faq
+    - bunq-terms-of-service
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bunq-api
+  title: Bunq API
+  description: >-
+    We offer mobile banking that makes life easy—wherever, whenever. Join us and
+    discover a simple, sustainable, and user-centered way of banking that makes
+    everyday finances 100% hassle-free.
+  tags:
+    - apis
+    - banks
+    - banking
+    - psd2
+  links:
+    - url: 'https://doc.bunq.com/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: bunq
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-documentation
+  title: Bunq Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-swagger
+  title: Bunq Swagger
+  description: Needs a description.
+  links:
+    - url: 'https://raw.githubusercontent.com/bunq/doc/master/swagger.json'
+      title: Swagger
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-portal
+  title: Bunq Portal
+  description: Needs a description.
+  links:
+    - url: 'https://developer.bunq.com/en/'
+      title: Portal
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-authentication
+  title: Bunq Authentication
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/#/authentication'
+      title: Authentication
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-errors
+  title: Bunq Errors
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/#/errors'
+      title: Errors
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-headers
+  title: Bunq Headers
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/#/headers'
+      title: Headers
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-type
+  title: Bunq Type
+  description: Needs a description.
+  links:
+    - url: 'https://example.com'
+      title: Type
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-callbacks
+  title: Bunq Callbacks
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/#/callbacks'
+      title: Callbacks
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-pagination
+  title: Bunq Pagination
+  description: Needs a description.
+  links:
+    - url: 'https://doc.bunq.com/#/pagination'
+      title: Pagination
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-change-log
+  title: Bunq Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://beta.doc.bunq.com/basics/changelog'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-status
+  title: Bunq Status
+  description: Needs a description.
+  links:
+    - url: 'https://status.bunq.com/'
+      title: Status
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-github-organization
+  title: Bunq GitHub Organization
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/bunq'
+      title: GitHub Organization
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-postman-collections
+  title: Bunq Postman Collections
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/bunq/postman/'
+      title: Postman Collections
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-sandbox
+  title: Bunq Sandbox
+  description: Needs a description.
+  links:
+    - url: 'https://beta.doc.bunq.com/basics/sandbox'
+      title: Sandbox
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-blog
+  title: Bunq Blog
+  description: Needs a description.
+  links:
+    - url: 'https://medium.com/bunq-developers-corner'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-faq
+  title: Bunq FAQ
+  description: Needs a description.
+  links:
+    - url: 'https://beta.doc.bunq.com/other/faq'
+      title: FAQ
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bunq-terms-of-service
+  title: Bunq Terms of Service
+  description: Needs a description.
+  links:
+    - url: >-
+        https://assets-global.website-files.com/63b43f001c7774d38d5f3a2d/63b43f001c7774ee815f41aa_20200805_terms_bunq_API_EN.pdf
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - bunq

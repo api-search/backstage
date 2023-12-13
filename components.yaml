@@ -1,0 +1,137 @@
+# Components   
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apis-io-web-site
+  title: APIs.io Website
+  description: The main website for the APIs.io search engine.
+  tags:
+    - consumer  
+  links:
+    - url: https://apis.io
+      title: APIs.io
+      icon: dashboard  
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components
+  consumesApis: [search-api]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apis-io-admin
+  title: APIs.io Admin
+  description: The administrative site for APIs.io.
+  tags:
+    - internal
+    - partner
+  links:
+    - url: https://admin.apis.io
+      title: APIs.io Admin
+      icon: dashboard    
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components
+  consumesApis: [search-api,auth-api]  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: developer-apis-io
+  title: Developer APIs.io
+  description: The developer portal for APIs.io.
+  tags:
+    - portal
+    - developers  
+  links:
+    - url: https://developer.apis.io
+      title: Developer APIs.io
+      icon: dashboard    
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: discussions
+  title: APIs.io Discussions
+  description: Where the APIs.io discussion is happening.
+  tags:
+    - forum
+    - questions
+    - answers
+    - apis
+  links:
+    - url: https://github.com/orgs/api-search/projects/1/views/1
+      title: APIs.io Forum
+      icon: dashboard    
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: projects
+  title: APIs.io Projects
+  description: The project management for APIs.io.
+  tags:
+    - tasks
+    - coordination
+  links:
+    - url: https://github.com/orgs/api-search/projects/1/views/1
+      title: APIs.io Kanban
+      icon: dashboard     
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apis-json-specification
+  title: APIs.json Specification
+  description: The APIs.json specification format.
+  tags:
+    - specification
+    - standard
+  links:
+    - url: https://apisjson.org
+      title: APIs.json
+      icon: dashboard    
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apis-json-builder
+  title: APIs.json Builder
+  description: A web builder for APIs.json.
+  tags:
+    - tools
+    - apis-json
+  links:
+    - url: https://builder.apisyaml.org
+      title: APIs.json Builder
+      icon: dashboard    
+spec:
+  type: website
+  lifecycle: alpha
+  owner: apis-io
+  system: components  

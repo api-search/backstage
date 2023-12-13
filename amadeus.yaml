@@ -1,0 +1,569 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: amadeus
+  title: Amadeus
+  tags:
+    - apis
+    - travel
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/amadeus.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - amadeus-airport-city-search-api
+    - amadeus-flight-status-api
+    - amadeus-airline-code-lookup-api
+  hasPart:
+    - amadeus-github-repository
+    - amadeus-portal
+    - amadeus-signup
+    - amadeus-login
+    - amadeus-blog
+    - amadeus-support
+    - amadeus-getting-started
+    - amadeus-privacy-policy
+    - amadeus-terms-of-use
+    - amadeus-plan
+    - amadeus-contact
+    - amadeus-faq
+    - amadeus-code
+    - amadeus-tutorials
+    - amadeus-videos
+    - amadeus-change-log
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: amadeus-airport-city-search-api
+  title: Amadeus Airport & City Search API
+  description: >-
+    The Airport & City Search API finds airports and cities that match a
+    specific word or string of letters. Using this API, you can automatically
+    suggest airports based on what the traveler enters in the search field. The
+    API provides a list of airports/cities ordered by yearly passenger volume
+    with the name, 3-letter IATA code, time zone and coordinates of each
+    airport. 
+  tags:
+    - aiports
+    - cities
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/airport-and-city-search
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: amadeus
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-documentation
+  title: Amadeus Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/airport-and-city-search
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-openapi
+  title: Amadeus OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/amadeus4dev/amadeus-open-api-specification/main/spec/yaml/AirportCitySearch_v1_swagger_specification.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-x-type
+  title: Amadeus x-type
+  description: Needs a description.
+  links:
+    - url: 'https://example.com'
+      title: x-type
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: amadeus-flight-status-api
+  title: Amadeus Flight Status API
+  description: >-
+    The Flight Status API provides real-time flight schedule data including
+    up-to-date departure and arrival times, terminal and gate information,
+    flight duration and real-time delay status. Help travelers track the live
+    status of their flight and enjoy a stress-free trip.
+  tags:
+    - airlines
+    - flights
+    - status
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/on-demand-flight-status
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: amadeus
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-documentation
+  title: Amadeus Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/on-demand-flight-status
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-openapi
+  title: Amadeus OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/amadeus4dev/amadeus-open-api-specification/main/spec/yaml/OnDemandFlightStatus_v2_swagger_specification.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: amadeus-airline-code-lookup-api
+  title: Amadeus Airline Code Lookup API
+  description: >-
+    The Airline Code Lookup API lets you find the name of an airline by its IATA
+    or ICAO airline code. You can search for multiple airline names by including
+    various airline codes in the same request. 
+  tags:
+    - airlines
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/airline-code-lookup
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: amadeus
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-documentation
+  title: Amadeus Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developers.amadeus.com/self-service/category/flights/api-doc/airline-code-lookup
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-openapi
+  title: Amadeus OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/amadeus4dev/amadeus-open-api-specification/main/spec/yaml/AirlineCodeLookUp_v1_swagger_specification.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-github-repository
+  title: Amadeus GitHub Repository
+  description: Needs a description.
+  links:
+    - url: 'https://github.com/amadeus4dev/amadeus-open-api-specification'
+      title: GitHub Repository
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-portal
+  title: Amadeus Portal
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/'
+      title: Portal
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-signup
+  title: Amadeus SignUp
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/register'
+      title: SignUp
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-login
+  title: Amadeus Login
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/signin'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-blog
+  title: Amadeus Blog
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/blog'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-support
+  title: Amadeus Support
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/support'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-getting-started
+  title: Amadeus Getting Started
+  description: Needs a description.
+  links:
+    - url: >-
+        https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335
+      title: Getting Started
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-privacy-policy
+  title: Amadeus Privacy Policy
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/legal/privacy-policy'
+      title: Privacy Policy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-terms-of-use
+  title: Amadeus Terms of Use
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/legal/terms-of-use'
+      title: Terms of Use
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-plan
+  title: Amadeus Plan
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/pricing'
+      title: Plan
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-contact
+  title: Amadeus Contact
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/support'
+      title: Contact
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-faq
+  title: Amadeus FAQ
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/support/faq/'
+      title: FAQ
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-code
+  title: Amadeus Code
+  description: Needs a description.
+  links:
+    - url: 'https://amadeus4dev.github.io/developer-guides/examples/code-example/'
+      title: Code
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-tutorials
+  title: Amadeus Tutorials
+  description: Needs a description.
+  links:
+    - url: 'https://amadeus4dev.github.io/developer-guides/resources/'
+      title: Tutorials
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-videos
+  title: Amadeus Videos
+  description: Needs a description.
+  links:
+    - url: 'https://www.youtube.com/@amadeusfordevelopers8592'
+      title: Videos
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amadeus-change-log
+  title: Amadeus Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://developers.amadeus.com/self-service/apis-changelog'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amadeus

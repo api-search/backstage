@@ -1,0 +1,462 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: adyen
+  title: Adyen
+  tags:
+    - apis
+    - payments
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/adyen.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - adyen-account-api
+    - adyen-balance-control-api
+    - adyen-checkout-api
+  hasPart:
+    - adyen-terms-of-service
+    - adyen-authentication
+    - adyen-plans
+    - adyen-documentation
+    - adyen-newsletter
+    - adyen-knowledge
+    - adyen-login
+    - adyen-support
+    - adyen-contact
+    - adyen-webinars
+    - adyen-privacy
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: adyen-account-api
+  title: Adyen Account API
+  description: >-
+    This API is used for the classic integration. If you are just starting your
+    implementation, refer to our new integration guide instead. The Account API
+    provides endpoints for managing account-related entities on your platform.
+    These related entities include account holders, accounts, bank accounts,
+    shareholders, and verification-related documents. The management operations
+    include actions such as creation, retrieval, updating, and deletion of them.
+  tags:
+    - payments
+    - accounts
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/Account/6/overview'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://cal-test.adyen.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: adyen
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-documentation
+  title: Adyen Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/Account/6/overview'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-openapi
+  title: Adyen OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/Adyen/adyen-openapi/main/yaml/AccountService-v6.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-x-type
+  title: Adyen x-type
+  description: Needs a description.
+  links:
+    - url: 'https://example.com'
+      title: x-type
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: adyen-balance-control-api
+  title: Adyen Balance Control API
+  description: >-
+    The Balance Control API lets you transfer funds between merchant accounts
+    that belong to the same legal entity and are under the same company account.
+  tags:
+    - payments
+    - funds
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/BalanceControl/1/overview'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://pal-test.adyen.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: adyen
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-documentation
+  title: Adyen Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/BalanceControl/1/overview'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-openapi
+  title: Adyen OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/Adyen/adyen-openapi/main/yaml/BalanceControlService-v1.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: adyen-checkout-api
+  title: Adyen Checkout API
+  description: This is the description of your API.
+  tags:
+    - checkout
+    - commerce
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/Checkout/71/overview'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: adyen
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-documentation
+  title: Adyen Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.adyen.com/api-explorer/Checkout/71/overview'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-openapi
+  title: Adyen OpenAPI
+  description: Needs a description.
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/Adyen/adyen-openapi/main/yaml/CheckoutService-v37.yaml
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-terms-of-service
+  title: Adyen Terms of Service
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/legal/terms-and-conditions'
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-authentication
+  title: Adyen Authentication
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/authentication-3d-secure'
+      title: Authentication
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-plans
+  title: Adyen Plans
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/pricing'
+      title: Plans
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-documentation
+  title: Adyen Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.adyen.com/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-newsletter
+  title: Adyen Newsletter
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/newsletter'
+      title: Newsletter
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-knowledge
+  title: Adyen Knowledge
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/knowledge-hub'
+      title: Knowledge
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-login
+  title: Adyen Login
+  description: Needs a description.
+  links:
+    - url: 'https://authn-live.adyen.com/authn/ui/login'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-support
+  title: Adyen Support
+  description: Needs a description.
+  links:
+    - url: 'https://help.adyen.com/en_US'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-contact
+  title: Adyen Contact
+  description: Needs a description.
+  links:
+    - url: 'https://help.adyen.com/en_US/contact'
+      title: Contact
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-webinars
+  title: Adyen Webinars
+  description: Needs a description.
+  links:
+    - url: 'https://help.adyen.com/en_US/academy/webinars'
+      title: Webinars
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adyen-privacy
+  title: Adyen Privacy
+  description: Needs a description.
+  links:
+    - url: 'https://www.adyen.com/policies-and-disclaimer/privacy-policy'
+      title: Privacy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - adyen

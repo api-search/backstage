@@ -1,0 +1,668 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: contenful
+  title: Contenful
+  tags:
+    - content
+    - cms
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/contentful.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - contentful-content-delivery-api
+    - contentful-content-management-api
+    - contentful-preview-api
+    - contentful-images-api
+    - contentful-graphql-content-api
+    - contentful-user-management-api
+    - contentful-scim-api
+  hasPart:
+    - contenful-portal
+    - contenful-documentation
+    - contenful-change-log
+    - contenful-blog
+    - contenful-plans
+    - contenful-sign-up
+    - contenful-login
+    - contenful-webhooks
+    - contenful-change-log
+    - contenful-code-of-conduct
+    - contenful-support
+    - contenful-stack-overflow
+    - contenful-security
+    - contenful-privacy-policy
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-content-delivery-api
+  title: Contentful Content Delivery API
+  description: >-
+    The Content Delivery API (CDA), available at cdn.contentful.com, is a
+    read-only API for delivering content from Contentful to apps, websites and
+    other media. Content is delivered as JSON data, and images, videos and other
+    media as files.
+  tags:
+    - content
+    - delivery
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-delivery-api/
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://cdn.contentful.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-delivery-api/
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-content-management-api
+  title: Contentful Content Management API
+  description: >-
+    Contentful's Content Management API (CMA) helps you manage content in your
+    spaces. To learn more about how to model your content, read our modeling
+    guide.
+  tags:
+    - content
+    - management
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-management-api/
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-management-api/
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-preview-api
+  title: Contentful Preview API
+  description: >-
+    In addition to the Content Delivery API (CDA) for published content, is the
+    Preview API for previewing both published and unpublished content. It
+    maintains the same behaviour and parameters as the CDA, but delivers the
+    latest drafts for entries and assets. The Content Preview API is used to
+    display the latest version of an entry.
+  tags:
+    - content
+    - preview
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-preview-api/
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/content-preview-api/
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-images-api
+  title: Contentful Images API
+  description: >-
+    The Contentful Images API allows the retrieval and manipulation of image
+    files referenced from assets.
+  tags:
+    - content
+    - images
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/images-api/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/images-api/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-graphql-content-api
+  title: Contentful GraphQL Content API
+  description: >-
+    The GraphQL Content API provides a GraphQL API interface to the content from
+    Contentful. Each Contentful space comes with a GraphQL schema based on its
+    content model. This GraphQL schema is generated at request time and is
+    always up-to-date with the current status of the space.
+  tags:
+    - content
+    - graphql
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/graphql/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/graphql/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-user-management-api
+  title: Contentful User Management API
+  description: >-
+    Contentful's User Management API helps organizations programmatically manage
+    their organizations, organization memberships, teams, space memberships and
+    more.
+  tags:
+    - content
+    - users
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/user-management-api/
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: >-
+        https://www.contentful.com/developers/docs/references/user-management-api/
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: contentful-scim-api
+  title: Contentful SCIM API
+  description: >-
+    System for Cross-domain Identity Management, or SCIM, is an API
+    specification created to facilitate the management of people and groups of
+    people in cloud-based applications and services.
+  tags:
+    - scim
+    - content
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/scim-api/'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://api.example.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: contenful
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/docs/references/scim-api/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-portal
+  title: Contenful Portal
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/'
+      title: Portal
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-documentation
+  title: Contenful Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/docs/'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-change-log
+  title: Contenful Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/changelog/'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-blog
+  title: Contenful Blog
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/blog/category/guides/'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-plans
+  title: Contenful Plans
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/pricing/'
+      title: Plans
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-sign-up
+  title: Contenful Sign Up
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/sign-up/#small'
+      title: Sign Up
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-login
+  title: Contenful Login
+  description: Needs a description.
+  links:
+    - url: 'https://be.contentful.com/login'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-webhooks
+  title: Contenful Webhooks
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/faq/webhooks/'
+      title: Webhooks
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-change-log
+  title: Contenful Change Log
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/changelog/'
+      title: Change Log
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-code-of-conduct
+  title: Contenful Code of Conduct
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/developers/code-of-conduct/'
+      title: Code of Conduct
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-support
+  title: Contenful Support
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/support/'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-stack-overflow
+  title: Contenful Stack Overflow
+  description: Needs a description.
+  links:
+    - url: 'http://stackoverflow.com/questions/tagged/contentful?sort=newest'
+      title: Stack Overflow
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-security
+  title: Contenful Security
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/security/'
+      title: Security
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contenful-privacy-policy
+  title: Contenful Privacy Policy
+  description: Needs a description.
+  links:
+    - url: 'https://www.contentful.com/legal/privacy-at-contentful/privacy-notice/'
+      title: Privacy Policy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - contenful

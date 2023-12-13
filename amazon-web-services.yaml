@@ -1,0 +1,350 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: amazon-web-services
+  title: Amazon Web Services
+  tags:
+    - apis
+    - cloud
+  links:
+    - url: >-
+        https://raw.githubusercontent.com/apis-json/artisanal/main/apis/amazon-web-services.json
+      title: APIs.json
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  providesApi:
+    - amazon-s3
+    - amazon-ec2
+  hasPart:
+    - amazon-web-services-getting-started
+    - amazon-web-services-sdks
+    - amazon-web-services-blog
+    - amazon-web-services-support
+    - amazon-web-services-linkedin
+    - amazon-web-services-whats-new
+    - amazon-web-services-signup
+    - amazon-web-services-login
+    - amazon-web-services-terms-of-service
+    - amazon-web-services-privacy-policy
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: amazon-s3
+  title: Amazon S3
+  description: >-
+    Amazon Simple Storage Service (Amazon S3) is an object storage service
+    offering industry-leading scalability, data availability, security, and
+    performance. S3 is built to store and retrieve any amount of data from
+    anywhere. Customers of all sizes and industries can store and protect any
+    amount of data for virtually any use case, such as data lakes, cloud-native
+    applications, and mobile applications.
+  tags:
+    - storage
+  links:
+    - url: 'https://aws.amazon.com/s3/?nc2=h_ql_prod_st_s3'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://s3.Region.amazonaws.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: amazon-web-services
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-documentation
+  title: Amazon Web Services Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-openapi
+  title: Amazon Web Services OpenAPI
+  description: Needs a description.
+  links:
+    - url: 'https://api.apis.guru/v2/specs/amazonaws.com/s3/2006-03-01/openapi.yaml'
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: amazon-ec2
+  title: Amazon EC2
+  description: This is the description of your API.
+  tags:
+    - compute
+  links:
+    - url: 'https://aws.amazon.com/ec2/?nc2=h_ql_prod_fs_ec2'
+      title: Human URL
+      icon: dashboard
+      type: apis-io
+    - url: 'https://ec2.region.amazonaws.com'
+      title: Base URL
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  system: amazon-web-services
+  definition: >-
+    {"openapi":"3.0.1","info":{"title":"API","description":"Minimum viable
+    OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
+    API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
+    property name."}}}}}}
+  apiProvidedBy:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-documentation
+  title: Amazon Web Services Documentation
+  description: Needs a description.
+  links:
+    - url: 'https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Welcome.html'
+      title: Documentation
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-openapi
+  title: Amazon Web Services OpenAPI
+  description: Needs a description.
+  links:
+    - url: 'https://api.apis.guru/v2/specs/amazonaws.com/ec2/2016-11-15/openapi.yaml'
+      title: OpenAPI
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-getting-started
+  title: Amazon Web Services Getting Started
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/getting-started/?nc1=f_cc'
+      title: Getting Started
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-sdks
+  title: Amazon Web Services SDKs
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/developer/tools/?nc1=f_dr'
+      title: SDKs
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-blog
+  title: Amazon Web Services Blog
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/blogs/?nc1=f_cc'
+      title: Blog
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-support
+  title: Amazon Web Services Support
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/premiumsupport/?nc1=f_dr'
+      title: Support
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-linkedin
+  title: Amazon Web Services LinkedIn
+  description: Needs a description.
+  links:
+    - url: 'https://www.linkedin.com/company/amazon-web-services/'
+      title: LinkedIn
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-whats-new
+  title: Amazon Web Services Whats New
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/new/?nc1=f_cc'
+      title: Whats New
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-signup
+  title: Amazon Web Services SignUp
+  description: Needs a description.
+  links:
+    - url: 'https://portal.aws.amazon.com/billing/signup'
+      title: SignUp
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-login
+  title: Amazon Web Services Login
+  description: Needs a description.
+  links:
+    - url: 'https://signin.aws.amazon.com/signin'
+      title: Login
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-terms-of-service
+  title: Amazon Web Services Terms of Service
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/serviceterms/'
+      title: Terms of Service
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: amazon-web-services-privacy-policy
+  title: Amazon Web Services Privacy Policy
+  description: Needs a description.
+  links:
+    - url: 'https://aws.amazon.com/privacy/'
+      title: Privacy Policy
+      icon: dashboard
+      type: apis-io
+spec:
+  owner: apis-io
+  type: apis-json
+  lifecycle: published
+  partOf:
+    - amazon-web-services
