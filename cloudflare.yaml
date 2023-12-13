@@ -18,7 +18,7 @@ spec:
   type: apis-json
   providesApi:
     - cloudflare-api
-  hasPart:
+  dependencyOf:
     - cloudflare-learning-paths
     - cloudflare-tutorials
     - cloudflare-status
@@ -66,8 +66,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -84,8 +82,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - cloudflare
+  system: cloudflare
+  providesApis:
+    - cloudflare-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -103,8 +102,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - cloudflare
+  system: cloudflare
+  providesApis:
+    - cloudflare-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -121,7 +121,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -139,7 +140,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -157,7 +159,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -175,7 +178,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -193,7 +197,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -211,7 +216,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -229,7 +235,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -247,7 +254,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -265,7 +273,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -283,7 +292,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -301,7 +311,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -319,7 +330,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -337,7 +349,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare
 ---
 apiVersion: backstage.io/v1alpha1
@@ -355,5 +368,6 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: cloudflare
+  providesApis:
     - cloudflare

@@ -20,7 +20,7 @@ spec:
     - adyen-account-api
     - adyen-balance-control-api
     - adyen-checkout-api
-  hasPart:
+  dependencyOf:
     - adyen-terms-of-service
     - adyen-authentication
     - adyen-plans
@@ -67,8 +67,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - adyen
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -85,8 +83,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-account-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -104,8 +103,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-account-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -122,8 +122,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-account-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -155,8 +156,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - adyen
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -173,8 +172,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-balance-control-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -192,8 +192,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-balance-control-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -223,8 +224,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - adyen
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -241,8 +240,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-checkout-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -260,8 +260,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - adyen
+  system: adyen
+  providesApis:
+    - adyen-checkout-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -278,7 +279,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -296,7 +298,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -314,7 +317,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -332,7 +336,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -350,7 +355,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -368,7 +374,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -386,7 +393,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -404,7 +412,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -422,7 +431,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -440,7 +450,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen
 ---
 apiVersion: backstage.io/v1alpha1
@@ -458,5 +469,6 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: adyen
+  providesApis:
     - adyen

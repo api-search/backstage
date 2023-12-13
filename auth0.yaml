@@ -18,7 +18,7 @@ spec:
   type: apis-json
   providesApi:
     - auth0-api
-  hasPart:
+  dependencyOf:
     - auth0-articles
     - auth0-quickstarts
     - auth0-sdks
@@ -63,8 +63,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - auth0
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -81,8 +79,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - auth0
+  system: auth0
+  providesApis:
+    - auth0-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -99,7 +98,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -117,7 +117,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -135,7 +136,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -153,7 +155,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -171,7 +174,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -189,7 +193,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -207,7 +212,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -225,7 +231,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -243,7 +250,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -261,7 +269,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -279,7 +288,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -297,7 +307,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0
 ---
 apiVersion: backstage.io/v1alpha1
@@ -315,5 +326,6 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: auth0
+  providesApis:
     - auth0

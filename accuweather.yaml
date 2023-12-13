@@ -27,7 +27,7 @@ spec:
     - accuweather-tropical-api
     - accuweather-translations-api
     - accuweather-minutecast-api
-  hasPart:
+  dependencyOf:
     - accuweather-best-practices
     - accuweather-status
     - accuweather-terms-of-service
@@ -66,8 +66,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -84,8 +82,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-locations-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -115,8 +114,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -133,8 +130,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-forecast-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -165,8 +163,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -184,8 +180,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-current-conditions-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -217,8 +214,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -235,8 +230,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-indices-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -269,8 +265,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -287,8 +281,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-weather-alarms-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -320,8 +315,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -338,8 +331,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-alerts-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -369,8 +363,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -387,8 +379,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-imagery-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -420,8 +413,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -438,8 +429,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-tropical-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -471,8 +463,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -489,8 +479,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-translations-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -520,8 +511,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -538,8 +527,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - accuweather
+  system: accuweather
+  providesApis:
+    - accuweather-minutecast-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -556,7 +546,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -574,7 +565,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -592,7 +584,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -610,7 +603,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -628,7 +622,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -646,7 +641,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather
 ---
 apiVersion: backstage.io/v1alpha1
@@ -664,5 +660,6 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: accuweather
+  providesApis:
     - accuweather

@@ -20,7 +20,7 @@ spec:
     - jira-api
     - confluence-api
     - bitbucket-api
-  hasPart:
+  dependencyOf:
     - atlassian-status
     - atlassian-blog
     - atlassian-road-map
@@ -62,8 +62,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -80,8 +78,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - jira-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -99,8 +98,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - jira-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -118,8 +118,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - jira-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -155,8 +156,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -173,8 +172,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -192,8 +192,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -211,8 +212,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -229,8 +231,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -248,8 +251,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -267,8 +271,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - confluence-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -300,8 +305,6 @@ spec:
     OpenAPI","version":"V1"},"servers":[{"url":"https://api.example.com"}],"paths":{"/api":{"get":{"summary":"API","description":"An
     API.","operationId":"api","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Response"}}}}}}}},"components":{"schemas":{"Response":{"type":"object","required":["name"],"properties":{"name":{"type":"string","description":"A
     property name."}}}}}}
-  apiProvidedBy:
-    - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -318,8 +321,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - bitbucket-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -337,8 +341,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - bitbucket-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -356,8 +361,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - bitbucket-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -375,8 +381,9 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
-    - atlassian
+  system: atlassian
+  providesApis:
+    - bitbucket-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -393,7 +400,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -411,7 +419,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -429,7 +438,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -447,7 +457,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -465,7 +476,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -483,7 +495,8 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
 ---
 apiVersion: backstage.io/v1alpha1
@@ -501,5 +514,6 @@ spec:
   owner: apis-io
   type: apis-json
   lifecycle: published
-  partOf:
+  system: atlassian
+  providesApis:
     - atlassian
